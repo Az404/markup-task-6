@@ -1,0 +1,426 @@
+body
+{
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 1.25;
+}
+
+h3
+{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+a
+{
+    color: #0054b9;
+    text-decoration: none;
+}
+
+.layout
+{
+    display: grid;
+    grid-template-columns: 20vw 1fr 1fr 1fr 20vw;
+    grid-template-areas: 'c  e8 e9  u   u'
+        'e1  n  n  a  e2'
+        ' l  s  s  s  e3'
+        'e4  b  b  b  e5'
+        'e6  w  w  w  e7';
+    grid-gap: 10px;
+}
+
+.city-block
+{
+    grid-area: c;
+    color: #989898;
+    padding: 10px;
+}
+
+.settings
+{
+    grid-area: st;
+}
+
+.user-block
+{
+    grid-area: u;
+}
+
+.ya-logo
+{
+    grid-area: l;
+}
+
+.news-block
+{
+    grid-area: n;
+}
+
+.ya-adv-block
+{
+    grid-area: a;
+}
+
+.search-block
+{
+    grid-area: s;
+}
+
+.banner-block
+{
+    grid-area: b;
+}
+
+.widgets-block
+{
+    grid-area: w;
+    display: flex;
+}
+
+.column
+{
+    flex-basis: calc((100% - 2 * 10px) / 3);
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.city-block img
+{
+    vertical-align: middle;
+}
+
+.settings
+{
+    position: relative;
+    float: right;
+    text-align: right;
+    padding: 10px 30px;
+    height: 40px;
+    box-sizing: border-box;
+}
+
+.settings-popup:before
+{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    transform: rotate(45deg);
+    transform-origin: top left;
+    z-index: 0;
+    box-shadow: 0 0 7px rgba(128, 128, 128, .62);
+}
+
+.settings-popup:after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.settings-popup
+{
+    position: absolute;
+    top: 100%;
+    left: calc(50% - .5 * 200px);
+    width: 200px;
+    padding: 5px;
+    text-align: left;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(128, 128, 128, .62);
+}
+
+.setting
+{
+    position: relative;
+    height: 20px;
+    z-index: 2;
+}
+
+.setting label
+{
+    display: inline-block;
+    margin-top: 2px;
+    position: relative;
+    left: 25px;
+    margin-left: -25px;
+    padding-left: 25px;
+    z-index: 1;
+}
+
+.setting input
+{
+    position: absolute;
+    left: 5px;
+}
+
+.user-info
+{
+    float: right;
+    width: 150px;
+    padding: 10px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px rgba(128, 128, 128, .62);
+}
+
+.username
+{
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.username:first-letter
+{
+    color: red;
+}
+
+.mail-count
+{
+    font-weight: bold;
+}
+
+.tab-heading
+{
+    display: inline;
+    margin-right: 5px;
+}
+
+.tab-heading-inactive a
+{
+    color: #6da2e1;
+}
+
+.time
+{
+    color: gray;
+    font-size: 11px;
+    font-weight: 400;
+}
+
+.currency-name
+{
+    font-weight: bold;
+}
+
+.currency-rate
+{
+    margin-right: 10px;
+}
+
+.currency-grow
+{
+    color: gray;
+}
+
+.ya-logo
+{
+    margin: 10px 0 auto;
+    text-align: right;
+}
+
+.services-links
+{
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.services-links a
+{
+    margin-right: 10px;
+}
+
+.search-box
+{
+    margin-top: 10px;
+    height: 35px;
+    font-size: 0;
+}
+
+.search-box input,
+.search-box button
+{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.search-box input
+{
+    border: solid 2px #ffdb4d;
+    width: calc(100% - 80px);
+}
+
+.search-box button
+{
+    border: none;
+    background-color: #ffdb4d;
+    width: 80px;
+}
+
+.suggest
+{
+    margin-top: 10px;
+}
+
+.widgets-block article
+{
+    margin-bottom: 30px;
+}
+
+.service
+{
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.jokes input,
+.joke,
+.joke-more
+{
+    display: none;
+}
+
+.joke
+{
+    height: 150px;
+}
+
+.jokes input:nth-of-type(1):checked ~ .joke1-show,
+.jokes input:nth-of-type(2):checked ~ .joke2-show,
+.jokes input:nth-of-type(3):checked ~ .joke3-show,
+.jokes input:nth-of-type(4):checked ~ .joke4-show,
+.jokes input:nth-of-type(5):checked ~ .joke5-show
+{
+    display: block;
+}
+
+.reload
+{
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.tv-channel,
+.event-info
+{
+    margin-left: 5px;
+    color: grey;
+}
+
+.auto-news-list
+{
+    position: relative;
+    overflow: hidden;
+}
+
+.auto-news-list ul
+{
+    height: 250px;
+    width: 100%;
+    padding-right: 20%;
+    overflow-y: scroll;
+}
+
+.auto-news-list:before,
+.auto-news-list:after
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 50px;
+}
+
+.auto-news-list:before
+{
+    top: 0;
+    background: linear-gradient(to bottom, white, transparent);
+}
+
+.auto-news-list:after
+{
+    bottom: 0;
+    background: linear-gradient(to top, white, transparent);
+}
+
+.news-time
+{
+    color: grey;
+    font-size: .85em;
+}
+
+.weather h3
+{
+    word-spacing: 5px;
+}
+
+h3 img
+{
+    vertical-align: middle;
+}
+
+.weather img,
+.jams img
+{
+    margin-top: -7px;
+}
+
+.region-services
+{
+    line-height: 2;
+}
+
+.region-services .service
+{
+    margin-right: 10px;
+}
+
+ul
+{
+    padding-left: 0;
+}
+
+ul.no-bullet
+{
+    list-style-type: none;
+}
+
+li
+{
+    margin-bottom: 10px;
+}
+
+.widget-control
+{
+    display: none;
+}
+
+/* stylelint-disable selector-no-id */
+
+#services-control:not(:checked) ~ .layout .services-show,
+#jokes-control:not(:checked) ~ .layout .jokes-show,
+#tv-control:not(:checked) ~ .layout .tv-show,
+#auto-control:not(:checked) ~ .layout .auto-show,
+#weather-control:not(:checked) ~ .layout .weather-show,
+#jams-control:not(:checked) ~ .layout .jams-show,
+#region-control:not(:checked) ~ .layout .region-show,
+#events-control:not(:checked) ~ .layout .events-show,
+#services-control:not(:checked) ~ #jokes-control:not(:checked) ~ .layout .col-1,
+#tv-control:not(:checked) ~ #auto-control:not(:checked) ~ .layout .col-2
+{
+    display: none;
+}
+
+#settings-control,
+#settings-control:not(:checked) ~ .settings-popup
+{
+    display: none;
+}

@@ -3,7 +3,273 @@
 <head>
     <meta charset="utf-8">
     <title>Задача «Морда»</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+<input type="checkbox" class="widget-control" id="services-control" checked>
+<input type="checkbox" class="widget-control" id="jokes-control" checked>
+<input type="checkbox" class="widget-control" id="tv-control" checked>
+<input type="checkbox" class="widget-control" id="auto-control" checked>
+<input type="checkbox" class="widget-control" id="weather-control" checked>
+<input type="checkbox" class="widget-control" id="jams-control" checked>
+<input type="checkbox" class="widget-control" id="region-control" checked>
+<input type="checkbox" class="widget-control" id="events-control" checked>
+
+<section class="layout">
+    <section class="city-block">
+        <img src="images/arrow.png" alt="стрелка"> Екатеринбург
+    </section>
+    <section class="user-block">
+        <div class="user-info">
+            <span class="username">login</span>
+            <div class="mail-info">Почта <span class="mail-count">138</span></div>
+        </div>
+        <div class="settings">
+            <input type="checkbox" id="settings-control">
+            <label for="settings-control">Настройка</label>
+            <div class="settings-popup">
+                <div class="setting">
+                    <input type="checkbox">
+                    <input type="checkbox" checked class="services-show">
+                    <label for="services-control">Посещаемое</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox">
+                    <input type="checkbox" checked class="jokes-show">
+                    <label for="jokes-control">Лучшие анекдоты</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox">
+                    <input type="checkbox" checked class="tv-show">
+                    <label for="tv-control">Телепрограмма</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox">
+                    <input type="checkbox" checked class="auto-show">
+                    <label for="auto-control">Автомобильные новости</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox">
+                    <input type="checkbox" checked class="weather-show">
+                    <label for="weather-control">Погода</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox">
+                    <input type="checkbox" checked class="jams-show">
+                    <label for="jams-control">Пробки</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox">
+                    <input type="checkbox" checked class="region-show">
+                    <label for="region-control">Карта Екатеринбурга</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox">
+                    <input type="checkbox" checked class="events-show">
+                    <label for="events-control">Афиша</label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="ya-logo">
+        <img src="images/logo.svg" alt="Яндекс">
+    </div>
+    <section class="news-block">
+        <header>
+            <h3 class="tab-heading"><a href="#">Сейчас в СМИ</a></h3>
+            <h3 class="tab-heading tab-heading-inactive"><a href="#">в Екатеринбурге</a></h3>
+            <span class="time">13 ноября, понедельник 16:57</span>
+        </header>
+        <main>
+            <ul>
+                <li>Климкин рассказал о полученном от Трампа «месседже солидарности»</li>
+                <li>СМИ узнали о планах США выделить Украине 47 млн долларов на оружие</li>
+                <li>«Серьезные вопросы»: Эрдоган усомнился в возможности доверять НАТО</li>
+                <li>Появилось видео первого полета «летающего радара» А-100</li>
+                <li>ВМС Аргентины рассказали о сигналах с пропавшей подводной лодки</li>
+            </ul>
+            <div class="currency-rates">
+                <span class="currency-name">USD ЦБ</span>
+                <span class="currency-rate">59,63</span>
+
+                <span class="currency-name">EUR ЦБ</span>
+                <span class="currency-rate">70,36</span>
+
+                <span class="currency-name">НЕФТЬ</span>
+                <span class="currency-rate">62,74</span>
+                <span class="currency-grow">+2,13%</span>
+            </div>
+        </main>
+    </section>
+    <section class="ya-adv-block">
+        <img src="images/yabrowser.png" alt="Яндекс.Браузер">
+        <h3><a href="#">
+            Браузер <br>
+            без опасности
+        </a></h3>
+        Технология Протект
+    </section>
+    <section class="search-block">
+        <div class="services-links">
+            <a href="#">Видео</a>
+            <a href="#">Картинки</a>
+            <a href="#">Новости</a>
+            <a href="#">Карты</a>
+            <a href="#">Маркет</a>
+            <a href="#">Переводчик</a>
+            <a href="#">Музыка</a>
+            <a href="#">ещё</a>
+        </div>
+        <div class="search-box">
+            <input type="text">
+            <button class="search-btn">Найти</button>
+        </div>
+        <div class="suggest">Найдётся всё. Например, <a href="#">выхожу один я на дорогу</a></div>
+    </section>
+    <section class="banner-block">
+        <img src="images/banner.gif" alt="Toyota">
+    </section>
+    <section class="widgets-block">
+        <div class="column col-1">
+            <article class="services services-show">
+                <h3><a href="#">Посещаемое</a></h3>
+
+                <ul class="no-bullet">
+                    <li><span class="service">Маркет</span> — китайская распродажа</li>
+                    <li><span class="service">Авто.ру</span> — Туссан третьей серии</li>
+                    <li><span class="service">Недвижимость</span> — продажа студии</li>
+                    <li><span class="service">Работа</span> — охранником</li>
+                    <li><span class="service">Здоровье</span> — врач на связи</li>
+                    <li><span class="service">Коллекции</span> — как мелировать волосы</li>
+                    <li><span class="service">Авиабилеты</span> — из Екатеринбурга</li>
+                </ul>
+            </article>
+            <article class="jokes jokes-show">
+                <input type="radio" name="joke-select" id="joke1" checked>
+                <input type="radio" name="joke-select" id="joke2">
+                <input type="radio" name="joke-select" id="joke3">
+                <input type="radio" name="joke-select" id="joke4">
+                <input type="radio" name="joke-select" id="joke5">
+                <h3><a href="#">Лучшие анекдоты</a></h3>
+                <div class="joke joke1-show">
+                    Раздел: <a href="#">Медицинские</a>.
+                    <br>
+                    - Вас лечить хорошо или бесплатно?
+                </div>
+                <div class="joke joke2-show">
+                    Раздел: <a href="#">Политические</a>.
+                    <br>
+                    Внедрение электронных госуслуг позволяет увеличить штат чиновников втрое, бардак впятеро,
+                    а сами услуги не оказывать вообще, потому что компьютер сломался.
+                </div>
+                <div class="joke joke3-show">
+                    Раздел: <a href="#">Исторические</a>.
+                    <br>
+                    На допросе в НКВД: «Были ли колебания в проведении генеральной линии партии?» —
+                    «Колебался вместе с линией».
+                </div>
+                <div class="joke joke4-show">
+                    Раздел: <a href="#">Технические</a>.
+                    <br>
+                    - Я знаю замечательную шутку про UDP, но боюсь, что она до вас не дойдет.
+                </div>
+                <div class="joke joke5-show">
+                    Раздел: <a href="#">Исторические</a>.
+                    <br>
+                    Гражданин приходит в магазин, подходит к рыбному отделу и спрашивает: «У вас мяса нет?» —
+                    «Мужчина, у нас рыбы нет, а мяса нет — это в соседнем отделе».
+                </div>
+                <label class="joke-more joke5-show" for="joke1"><span class="reload">↻</span> Показать
+                    ещё</label>
+                <label class="joke-more joke1-show" for="joke2"><span class="reload">↻</span> Показать
+                    ещё</label>
+                <label class="joke-more joke2-show" for="joke3"><span class="reload">↻</span> Показать
+                    ещё</label>
+                <label class="joke-more joke3-show" for="joke4"><span class="reload">↻</span> Показать
+                    ещё</label>
+                <label class="joke-more joke4-show" for="joke5"><span class="reload">↻</span> Показать
+                    ещё</label>
+            </article>
+        </div>
+        <div class="column col-2">
+            <article class="teleprogram tv-show">
+                <h3><a href="#">Телепрограмма</a> <img src="images/tv-online.png" alt="ТВ онлайн"></h3>
+
+                <ul class="no-bullet">
+                    <li>16:00 Понять. Простить <span class="tv-channel">41 Домашний</span></li>
+                    <li>16:30 Место встречи <span class="tv-channel">НТВ</span></li>
+                    <li>16:30 Детективы <span class="tv-channel">Пятый канал</span></li>
+                    <li>16:30 Новости <span class="tv-channel">РЕН ТВ</span></li>
+                    <li>16:30 Гадалка <span class="tv-channel">ТВ-3</span></li>
+                    <li>16:30 Реальные пацаны <span class="tv-channel">ТНТ</span></li>
+                </ul>
+            </article>
+
+            <article class="auto-news auto-show">
+                <h3><a href="#">Автомобильные новости</a></h3>
+
+                <div class="auto-news-list">
+                    <ul class="no-bullet">
+                        <li>Geely рассчитывает на рост продаж на 60% в 2017 году
+                            <span class="news-time">13:28</span>
+                        </li>
+                        <li>Porsche вернулась к идее гибридного спорткара 911
+                            <span class="news-time">09:22</span>
+                        </li>
+                        <li>Mercedes-Benz анонсировал обновленную версию купе CLS
+                            <span class="news-time">14:43</span>
+                        </li>
+                        <li>Tesla показала эскиз гигантского электропикапа на базе грузовика Semi
+                            <span class="news-time">12:55</span>
+                        </li>
+                        <li>Названы цены и комплектации нового кроссовера Volvo XC60
+                            <span class="news-time">14:57</span>
+                        </li>
+                        <li>BMW выпустит спортивный седан M850i в 2018 году
+                            <span class="news-time">23:00</span>
+                        </li>
+                        <li>Администрации Орска требуются три новых авто за 2 млн рублей
+                            <span class="news-time">15:30</span>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+        <div class="column col-3">
+            <article class="weather weather-show">
+                <h3><a href="#">Погода</a> <img src="images/ovc-minus-sn.png" alt="небольшой снег"> −3 °C</h3>
+
+                Вечер -5, ночь -7
+            </article>
+            <article class="jams jams-show">
+                <h3><a href="#">Пробки</a> <img src="images/jams.png" alt="1 балл"> 1 балл</h3>
+
+                На дорогах свободно
+            </article>
+            <article class="region region-show">
+                <h3><a href="#">Карта Екатеринбурга</a></h3>
+
+                <div class="region-services">
+                    <span class="service">Такси</span>
+                    <span class="service">Расписания</span>
+                    <span class="service">Междугородные автобусы</span>
+                </div>
+            </article>
+            <article class="events events-show">
+                <h3><a href="#">Афиша</a></h3>
+
+                <ul class="no-bullet">
+                    <li>Субурбикон <span class="event-info">премьера в чт</span></li>
+                    <li>Последний богатырь <span class="event-info">приключения</span></li>
+                    <li>Фиксики: Большой секрет <span class="event-info">мультфильм</span></li>
+                    <li>Тор: Рагнарёк <span class="event-info">фэнтези</span></li>
+                    <li>Убийство в Восточном... <span class="event-info">драма</span></li>
+                    <li><span class="service">Концерты — Brainstorm</span></li>
+                </ul>
+            </article>
+        </div>
+    </section>
+</section>
 </body>
 </html>
