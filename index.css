@@ -262,6 +262,8 @@ a
 .search-box button
 {
     border: none;
+    border-radius: 0;
+    vertical-align: top;
     background-color: #ffdb4d;
     width: 80px;
 }
